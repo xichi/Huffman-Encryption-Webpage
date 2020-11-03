@@ -13,12 +13,14 @@ import JSZip from "jszip";
 import FileSaver from "file-saver";
 import "./index.scss";
 import Huffman from "../Huffman";
+// icons
 import UploadIcon from "../../assets/upload.png";
 import TextFileIcon from "../../assets/textFile.png";
 import DownloadIcon from "../../assets/download.png";
+import UnicornIcon from "../../assets/unicorn.png";
 
 const { Dragger } = Upload;
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Link } = Typography;
 const { TabPane } = Tabs;
 const { TextArea } = Input;
 
@@ -61,7 +63,13 @@ function Index() {
 
   return (
     <div className="App">
-      <Title level={3}>Online Huffman Encryption & Decryption</Title>
+      <img src={UnicornIcon} width="120" height="120" alt="icon" />
+      <Title level={3} style={{ margin: "15px 0 0 0" }}>
+        Online Huffman Encryption & Decryption
+      </Title>
+      <Title level={5} type="secondary" style={{ margin: "5px 0 0 0" }}>
+        在线哈夫曼加密&解密
+      </Title>
       <Tabs className="tab-container" defaultActiveKey="1">
         <TabPane tab="Upload Files" key="1">
           <div>
@@ -145,6 +153,10 @@ function Index() {
           />
         </TabPane>
       </Tabs>
+      <Typography className="footer">
+        <span>Developer: </span>
+        <Link className="link" href="http://xichi.xyz/homepage/#/home" target="_blank">XiChi's Homepage</Link>
+      </Typography>
     </div>
   );
 }
@@ -229,7 +241,6 @@ function TextPastingBox(props) {
         </Button>
         {encodedText ? (
           <>
-            {" "}
             <Paragraph
               className="encodeText-box"
               copyable={{ text: encodedText }}

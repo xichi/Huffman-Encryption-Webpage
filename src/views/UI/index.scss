@@ -1,8 +1,10 @@
 @import '../../styles/variables.scss';
 
 .App {
-  margin-top: 30px;
   text-align: center;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 .tab-container{
@@ -71,6 +73,20 @@
       button{
         margin-top: 10px;
       }
+    }
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $gray-400;
+  .link{
+    color: $gray-400!important;
+    &:hover{
+      color: $gray-600!important;
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.scss";
-import Index from "./views/Index/index";
+import Index from "./views/UI/index";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<Index />, document.getElementById("root"));
