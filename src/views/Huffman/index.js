@@ -1,3 +1,9 @@
+/**
+ * 构造函数 Huffman
+ * @param {String} str 需要编码的字符串
+ * @method encode 加密
+ * @method decode 解密
+ */
 function Huffman(str) {
   // 需要编码的字符串
   this.str = str;
@@ -15,6 +21,11 @@ function Huffman(str) {
   this.code = null;
   // 压缩比
   this.rate = 0;
+}
+function Node(left, right, data) {
+  this.left = left;
+  this.right = right;
+  this.data = data;
 }
 Huffman.prototype.cal = function cal() {
   let str = this.str;
@@ -39,11 +50,6 @@ Huffman.prototype.sort = function sort() {
     }
   }
   this.nodeList = result.sort(function(x,y){return x.data.val - y.data.val});
-}
-function Node(left, right, data) {
-  this.left = left;
-  this.right = right;
-  this.data = data;
 }
 Huffman.prototype.makeTree = function makeTree() {
   let i = 0;

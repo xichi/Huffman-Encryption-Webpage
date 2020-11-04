@@ -74,6 +74,9 @@ function Index() {
         <TabPane tab="Upload Files" key="1">
           <div>
             <FilesDroppingBox setFileList={updateFileList} />
+            <Title level={4} className="title">
+              Files List
+            </Title>
             <List
               dataSource={fileList}
               renderItem={(item, index) => (
@@ -155,7 +158,13 @@ function Index() {
       </Tabs>
       <Typography className="footer">
         <span>Developer: </span>
-        <Link className="link" href="http://xichi.xyz/homepage/#/home" target="_blank">XiChi's Homepage</Link>
+        <Link
+          className="link"
+          href="http://xichi.xyz/homepage/#/home"
+          target="_blank"
+        >
+          XiChi's Homepage
+        </Link>
       </Typography>
     </div>
   );
