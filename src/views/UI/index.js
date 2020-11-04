@@ -146,7 +146,7 @@ function Index() {
                   type="primary"
                   shape="round"
                   onClick={() => {
-                    setPastingBoxText(item.originText);
+                    setPastingBoxText(new String(item.originText));
                   }}
                 >
                   Upload Text
